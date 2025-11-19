@@ -1,10 +1,10 @@
 <?php
 
-$serverName = "test-srvr01.database.windows.net";
+$serverName = "newdb1.database.windows.net";
 $connectionOptions = array(
-    "Database" => "db01",
-    "Uid" => "Dawood",
-    "PWD" => "123@Itcs",
+    "Database" => "new",
+    "Uid" => "habib",
+    "PWD" => "paki.123",
     "Encrypt" => true
 
 );
@@ -18,7 +18,7 @@ if ($conn === false) {
 $name  = $_POST['name'];
 $email = $_POST['email'];
 
-$sql = "INSERT INTO test_table2 (name, email) VALUES (?, ?)";
+$sql = "INSERT INTO getztable (name, email) VALUES (?, ?)";
 $params = array($name, $email);
 
 $stmt = sqlsrv_query($conn, $sql, $params);
